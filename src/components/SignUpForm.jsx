@@ -2,10 +2,6 @@ function SignUpForm() {
   return (
     <main>
       <section>
-        <h1 className="text-bold text-7xl underline">
-          Newsletter Sign-up Form with Success Message
-        </h1>
-
         <p>Stay updated!</p>
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
         <p>Product discovery and building what matters</p>
