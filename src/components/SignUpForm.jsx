@@ -20,23 +20,34 @@ function SignUpForm() {
       return;
     }
     setSubmitted(true);
-    setEmail('');
     setError('');
   }
 
   if (submitted) {
     return (
-      <main>
-        <section>
-          <img src={iconSuccess} alt="Success icon" />
-          <p>Thanks for subscribing!</p>
-          <p>
-            A confirmation email has been sent to ash@loremcompany.com. Please
-            open it and click the button inside to confirm your subscription.
-          </p>
+      <main className="flex min-h-screen flex-col items-center md:justify-center md:bg-blue-700">
+        <section className="flex min-h-screen w-full flex-col justify-between px-card-300 py-card-1300 text-blue-800 md:min-h-0 md:w-[500px] md:justify-normal md:gap-card-400 md:rounded-[36px] md:bg-white md:p-card-800">
+          <div className="flex flex-col gap-card-400">
+            <img
+              src={iconSuccess}
+              alt="Success icon"
+              className="h-[64px] w-[64px]"
+            />
+            <p className="text-preset-1-bold-mobile md:text-preset-1-bold">
+              Thanks for subscribing!
+            </p>
+            <p className="text-preset-2-regular">
+              A confirmation email has been sent to{' '}
+              <span className="text-preset-2-bold">{email}</span>. Please open
+              it and click the button inside to confirm your subscription.
+            </p>
+          </div>
           <button
-            onClick={() => setSubmitted(false)}
-            className="w-full rounded-lg bg-blue-800 px-card-600 py-card-200 text-preset-2-bold text-nowrap text-white"
+            onClick={() => {
+              setSubmitted(false);
+              setEmail('');
+            }}
+            className="w-full rounded-lg bg-blue-800 px-card-600 py-card-200 text-preset-2-bold text-nowrap text-white focus:ring-2 focus:ring-blue-800 focus:ring-offset-2 focus:outline-none"
           >
             Dismiss message
           </button>
@@ -46,17 +57,29 @@ function SignUpForm() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center">
-      <section className="flex flex-col text-blue-800">
+    <main className="flex min-h-screen flex-col items-center md:bg-blue-700">
+      <section className="flex flex-col overflow-hidden text-blue-800 md:my-[73px] md:rounded-[36px] md:bg-white md:p-card-500">
         <img
           src={illustrationMobile}
           alt="Mobile illustration"
-          className="mb-card-500 w-full"
+          className="mb-card-500 w-full md:hidden lg:hidden"
+        />
+        <img
+          src={illustrationTablet}
+          alt="Tablet illustration"
+          className="mb-card-500 hidden w-full md:block lg:hidden"
+        />
+        <img
+          src={illustrationDesktop}
+          alt="Desktop illustration"
+          className="mb-card-500 hidden w-full md:hidden lg:block"
         />
 
-        <div className="flex flex-col gap-card-500 px-card-400">
+        <div className="flex flex-col gap-card-500 px-card-300 md:gap-card-300 md:px-0">
           <div className="flex flex-col gap-card-300">
-            <p className="text-preset-1-bold-mobile">Stay updated!</p>
+            <p className="text-preset-1-bold-mobile md:text-preset-1-bold">
+              Stay updated!
+            </p>
             <p className="text-preset-2-regular">
               Join 60,000+ product managers receiving monthly updates on:
             </p>
@@ -81,7 +104,6 @@ function SignUpForm() {
               <div className="flex flex-row">
                 <label
                   htmlFor="email"
-                  id="email"
                   className="flex-start mr-auto text-preset-3-bold"
                 >
                   Email address
@@ -95,15 +117,16 @@ function SignUpForm() {
               <input
                 type="email"
                 value={email}
+                id="email"
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="email@company.com"
-                className={`rounded-lg px-card-300 py-card-200 text-preset-2-regular ${error ? 'border border-red bg-red-100 text-red' : 'border border-grey text-grey'}`}
+                className={`rounded-lg px-card-300 py-card-200 text-preset-2-regular focus:ring-2 focus:ring-blue-800 focus:ring-offset-2 focus:outline-none ${error ? 'border border-red bg-red-100 text-red' : 'border border-grey text-grey'}`}
               />
             </div>
             <button
               onClick={handleSubmit}
               type="submit"
-              className="w-full rounded-lg bg-blue-800 px-card-600 py-card-200 text-preset-2-bold text-nowrap text-white"
+              className="w-full rounded-lg bg-blue-800 px-card-600 py-card-200 text-preset-2-bold text-nowrap text-white focus:ring-2 focus:ring-blue-800 focus:ring-offset-2 focus:outline-none"
             >
               Subscribe to monthly newsletter
             </button>
