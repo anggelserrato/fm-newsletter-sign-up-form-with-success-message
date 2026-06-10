@@ -10,6 +10,20 @@ function SignUpForm() {
   const [error, setError] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (!email) {
+      setError('Email is required');
+      return;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      setError('Valid email required');
+      return;
+    }
+    setSubmitted(true);
+    setEmail('');
+    setError('');
+  }
+
   if (submitted) {
     return (
       <main>
@@ -20,7 +34,12 @@ function SignUpForm() {
             A confirmation email has been sent to ash@loremcompany.com. Please
             open it and click the button inside to confirm your subscription.
           </p>
-          <button onClick={() => setSubmitted(false)}>Dismiss message</button>
+          <button
+            onClick={() => setSubmitted(false)}
+            className="w-full rounded-lg bg-blue-800 px-card-600 py-card-200 text-preset-2-bold text-nowrap text-white"
+          >
+            Dismiss message
+          </button>
         </section>
       </main>
     );
@@ -28,16 +47,14 @@ function SignUpForm() {
 
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <section className="flex max-w-md flex-col text-blue-800">
-        <div>
-          <img
-            src={illustrationMobile}
-            alt="Mobile illustration"
-            className="w-full"
-          />
-        </div>
+      <section className="flex flex-col text-blue-800">
+        <img
+          src={illustrationMobile}
+          alt="Mobile illustration"
+          className="mb-card-500 w-full"
+        />
 
-        <div className="mt-card-500 flex flex-col gap-card-500 px-card-400">
+        <div className="flex flex-col gap-card-500 px-card-400">
           <div className="flex flex-col gap-card-300">
             <p className="text-preset-1-bold-mobile">Stay updated!</p>
             <p className="text-preset-2-regular">
@@ -61,16 +78,33 @@ function SignUpForm() {
 
           <div className="flex flex-col gap-card-300">
             <div className="flex flex-col gap-card-100">
-              <p className="text-preset-3-bold">Email address</p>
+              <div className="flex flex-row">
+                <label
+                  htmlFor="email"
+                  id="email"
+                  className="flex-start mr-auto text-preset-3-bold"
+                >
+                  Email address
+                </label>
+                {error && (
+                  <p className="flex-end text-preset-3-bold text-red">
+                    {error}
+                  </p>
+                )}
+              </div>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="email@company.com"
-                className="rounded-lg border border-grey px-card-300 py-card-200 text-preset-2-regular text-grey"
+                className={`rounded-lg px-card-300 py-card-200 text-preset-2-regular ${error ? 'border border-red bg-red-100 text-red' : 'border border-grey text-grey'}`}
               />
             </div>
-            <button className="w-full rounded-lg bg-blue-800 px-card-600 py-card-200 text-preset-2-bold text-nowrap text-white">
+            <button
+              onClick={handleSubmit}
+              type="submit"
+              className="w-full rounded-lg bg-blue-800 px-card-600 py-card-200 text-preset-2-bold text-nowrap text-white"
+            >
               Subscribe to monthly newsletter
             </button>
           </div>
