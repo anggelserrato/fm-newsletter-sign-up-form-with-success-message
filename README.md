@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [View Code](https://github.com/anggelserrato/fm-newsletter-sign-up-form-with-success-message)
-- Live Site URL: [Live Site](https://your-live-site-url.com)
+- Live Site URL: [Live Site](https://fm-newsletter-sign-up-form-with-suc-xi.vercel.app/)
 
 ## My process
 
@@ -51,10 +51,11 @@ Users should be able to:
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Shots.so](https://shots.so/) - A fantastic tool for creating beautiful and professional screenshots of your websites.
+- [Squoosh.app](https://squoosh.app/) - An amazing image optimizer that helps you compress images without losing quality, making your site load faster.
+- [Google Webfonts Helper](https://gwfh.mranftl.com/fonts) - An excellent resource that allowed me to easily download and self-host Google Fonts, significantly improving the site's loading speed and privacy by avoiding external CDN requests.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [serrato.dev](https://www.serrato.dev)
+- Frontend Mentor - [@anggelserrato](https://www.frontendmentor.io/profile/anggelserrato)
