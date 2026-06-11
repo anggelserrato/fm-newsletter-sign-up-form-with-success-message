@@ -58,7 +58,7 @@ function SignUpForm() {
 
   return (
     <main className="flex min-h-screen flex-col items-center md:bg-blue-700">
-      <section className="flex flex-col text-blue-800 md:my-[73px] md:rounded-[36px] md:bg-white md:p-card-500 lg:my-[219px] lg:flex-row-reverse lg:items-center lg:gap-card-800 lg:p-card-400">
+      <section className="flex flex-col text-blue-800 md:my-[73px] md:rounded-[36px] md:bg-white md:p-card-500 md:shadow-card-1 lg:my-[219px] lg:flex-row-reverse lg:items-center lg:gap-card-800 lg:p-card-400 lg:shadow-card-1">
         <img
           src={illustrationMobile}
           alt="Mobile illustration"
