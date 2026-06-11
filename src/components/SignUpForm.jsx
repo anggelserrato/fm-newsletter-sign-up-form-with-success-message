@@ -47,7 +47,7 @@ function SignUpForm() {
               setSubmitted(false);
               setEmail('');
             }}
-            className="w-full rounded-lg bg-blue-800 from-gradient-start to-gradient-end px-card-600 py-card-200 text-preset-2-bold text-nowrap text-white hover:bg-linear-to-r focus:ring-2 focus:ring-blue-800 focus:ring-offset-2 focus:outline-none"
+            className="w-full rounded-lg bg-blue-800 from-gradient-start to-gradient-end px-card-600 py-card-200 text-preset-2-bold text-nowrap text-white shadow-none transition-shadow duration-300 hover:bg-linear-to-r hover:shadow-card focus:ring-2 focus:ring-blue-800 focus:ring-offset-2 focus:outline-none"
           >
             Dismiss message
           </button>
@@ -102,14 +102,11 @@ function SignUpForm() {
           <div className="flex flex-col gap-card-300 md:gap-card-200 lg:gap-card-300">
             <div className="flex flex-col gap-card-100">
               <div className="flex flex-row">
-                <label
-                  htmlFor="email"
-                  className="flex-start mr-auto text-preset-3-bold"
-                >
+                <label htmlFor="email" className="mr-auto text-preset-3-bold">
                   Email address
                 </label>
                 {error && (
-                  <p className="flex-end text-preset-3-bold text-red">
+                  <p className="justify-end text-preset-3-bold text-red">
                     {error}
                   </p>
                 )}
