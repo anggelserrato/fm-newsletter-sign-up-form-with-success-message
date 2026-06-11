@@ -43,11 +43,10 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- [Tailwind CSS v4](https://tailwindcss.com/) - Utility-first CSS framework
+- [Vite](https://vitejs.dev/) - Build tool and dev server
 
 ### Useful resources
 
