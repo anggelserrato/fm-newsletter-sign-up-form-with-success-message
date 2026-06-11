@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+<img width="1920" height="1440" alt="newsletter sign up form shots" src="https://github.com/user-attachments/assets/840bafb4-5691-4150-8cf9-6fc08bca2ed1" />
 
 ### Links
 
