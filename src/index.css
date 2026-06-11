@@ -24,6 +24,7 @@
   --color-red: hsl(4, 100%, 67%);
   --color-gradient-start: hsl(15, 100%, 61%);
   --color-gradient-end: hsl(346, 100%, 66%);
+  --shadow-card: 0 16px 32px 0 rgba(255, 97, 85, 0.5);
   --font-sans:
     'Roboto', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';

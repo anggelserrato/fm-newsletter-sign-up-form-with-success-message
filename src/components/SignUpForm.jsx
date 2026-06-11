@@ -47,7 +47,7 @@ function SignUpForm() {
               setSubmitted(false);
               setEmail('');
             }}
-            className="w-full rounded-lg bg-blue-800 px-card-600 py-card-200 text-preset-2-bold text-nowrap text-white focus:ring-2 focus:ring-blue-800 focus:ring-offset-2 focus:outline-none"
+            className="w-full rounded-lg bg-blue-800 from-gradient-start to-gradient-end px-card-600 py-card-200 text-preset-2-bold text-nowrap text-white hover:bg-linear-to-r focus:ring-2 focus:ring-blue-800 focus:ring-offset-2 focus:outline-none"
           >
             Dismiss message
           </button>
@@ -58,7 +58,7 @@ function SignUpForm() {
 
   return (
     <main className="flex min-h-screen flex-col items-center md:bg-blue-700">
-      <section className="flex flex-col overflow-hidden text-blue-800 md:my-[73px] md:rounded-[36px] md:bg-white md:p-card-500">
+      <section className="flex flex-col text-blue-800 md:my-[73px] md:rounded-[36px] md:bg-white md:p-card-500 lg:my-[219px] lg:flex-row-reverse lg:items-center lg:gap-card-800 lg:p-card-400">
         <img
           src={illustrationMobile}
           alt="Mobile illustration"
@@ -72,10 +72,10 @@ function SignUpForm() {
         <img
           src={illustrationDesktop}
           alt="Desktop illustration"
-          className="mb-card-500 hidden w-full md:hidden lg:block"
+          className="hidden w-full md:hidden lg:block lg:w-[400px] lg:shrink-0"
         />
 
-        <div className="flex flex-col gap-card-500 px-card-300 md:gap-card-300 md:px-0">
+        <div className="flex flex-col gap-card-500 px-card-300 md:gap-card-300 md:px-0 lg:w-[376px] lg:gap-card-400">
           <div className="flex flex-col gap-card-300">
             <p className="text-preset-1-bold-mobile md:text-preset-1-bold">
               Stay updated!
@@ -99,7 +99,7 @@ function SignUpForm() {
             </ul>
           </div>
 
-          <div className="flex flex-col gap-card-300">
+          <div className="flex flex-col gap-card-300 md:gap-card-200 lg:gap-card-300">
             <div className="flex flex-col gap-card-100">
               <div className="flex flex-row">
                 <label
@@ -126,7 +126,7 @@ function SignUpForm() {
             <button
               onClick={handleSubmit}
               type="submit"
-              className="w-full rounded-lg bg-blue-800 px-card-600 py-card-200 text-preset-2-bold text-nowrap text-white focus:ring-2 focus:ring-blue-800 focus:ring-offset-2 focus:outline-none"
+              className="w-full rounded-lg bg-blue-800 from-gradient-start to-gradient-end px-card-600 py-card-200 text-preset-2-bold text-nowrap text-white shadow-none transition-shadow duration-300 hover:bg-linear-to-r hover:shadow-card focus:ring-2 focus:ring-blue-800 focus:ring-offset-2 focus:outline-none"
             >
               Subscribe to monthly newsletter
             </button>
